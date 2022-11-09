@@ -1,0 +1,175 @@
+/* SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --primary-color: hsla(249, 15%, 56%, 1);
+}
+
+body * {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background: #22212c;
+}
+
+.app {
+  width: 90%;
+  margin-inline: auto;
+}
+
+/* TITLES */
+h2 {
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 2.9rem;
+
+  color: var(--primary-color);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 2rem;
+
+  color: #837e9f;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  color: var(--primary-color);
+}
+
+li.styled .circle {
+  clip-path: circle();
+  border: 3px solid var(--primary-color);
+  width: 1px;
+  margin: 1rem;
+}
+
+li.styled {
+  display: flex;
+  align-items: flex-start;
+
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 15px;
+
+  color: #837e9f;
+}
+
+strong {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* HEADER */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card {
+  background: #302f3d;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding-block: 3rem;
+}
+
+header.card {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+header.card img {
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 50%;
+  background: hsla(120, 100%, 50%, 1);
+  padding: 2px;
+}
+
+/* SOCIAL */
+
+#social {
+  padding-inline: 4rem;
+}
+
+#social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#social ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+
+  color: var(--primary-color);
+}
+
+/* TECHNOLOGIES */
+#technologies {
+  padding-inline: 2rem;
+}
+
+#technologies ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+
+  margin-inline: 1rem;
+}
+
+#technologies ul li {
+  width: 8.6rem;
+  padding: 0.6rem 1.6rem;
+  text-align: center;
+
+  background: #cb92b1;
+  border-radius: 30px;
+
+  font-weight: 700;
+  line-height: 1.3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+/* EXPERIENCE */
+#experience {
+  padding-inline: 2rem;
+}
+
+#experience ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-inline: 2rem;
+}
+
+/* EDUCATION */
+#education {
+  padding-inline: 2rem;
+}
