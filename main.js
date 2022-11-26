@@ -3,8 +3,12 @@ function toggleCollapse(projects) {
 }
 
 function createProject(title, description) {
-  let projectsTag = document.querySelector("#projects ul")
-  projectsTag.innerHTML += `
+  let projectsTag = document.querySelector("#projects ul ")
+  let firstProjectElement = document.querySelector(
+    "#projects ul li:first-child"
+  )
+  let newLi = document.createElement("li")
+  newLi.innerHTML = `
   <li class="card project">
     <a href="https://github.com/nesdark/${title}" target="_blank">
       <h4>
@@ -35,18 +39,18 @@ function createProject(title, description) {
     </a>
   </li>  
   `
+  projectsTag.insertBefore(newLi, firstProjectElement)
 }
 
 function createComment(date, title, comment, tags) {
   let createdYearMinusActualYear = new Date().getFullYear() - date
-  let posts = document.querySelector("#posts")
+  let posts = document.querySelector("#posts .posts-container")
   let tagsText = ""
 
   for (c = 0; c < tags.length; c++) {
     tagsText += `
     <li>${tags[c]}</li>
   `
-    console.log(tagsText)
   }
 
   posts.innerHTML += `
@@ -72,7 +76,12 @@ createProject(
   `Este projeto disponibiliza informações sobre os usuários para os visitantes da página, sendo eles seus interesses e como contatá-lo`
 )
 
-createComment(2022, "Olá dev", "XXXXXXX", ["#js", "#css", "#html"])
+createComment(
+  2022,
+  "Olá dev",
+  "Seja bem vindo ao meu portifólio, aqui você pode encontrar mais informações sobre mim",
+  ["#js", "#css", "#html"]
+)
 
 let currentDelay = 0
 let cards = document.querySelectorAll(".card")

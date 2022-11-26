@@ -20,12 +20,17 @@ body * {
 
 body {
   background: #22212c;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .app {
   width: 90%;
   margin-inline: auto;
+}
+
+.lateral,
+.container {
+  margin-top: 1rem;
 }
 
 /* TITLES */
@@ -83,6 +88,18 @@ strong {
   flex-direction: column;
   gap: 3rem;
 }
+
+/* SCROLL */
+main {
+  height: 53vh;
+  overflow-y: overlay;
+  cursor: ns-resize;
+}
+.app > .container {
+  height: 93vh;
+  overflow-y: overlay;
+  cursor: ns-resize;
+}
 /* HEADER */
 
 .card {
@@ -97,7 +114,6 @@ strong {
 
 header.card {
   text-align: center;
-  margin-top: 4rem;
   margin-bottom: 3rem;
 }
 
@@ -163,19 +179,19 @@ header.card img {
   color: #000000;
 }
 
-/* EXPERIENCE */
+/* EXPERIENCE & EDUCATION*/
 #experience {
   padding-inline: 2rem;
 }
 
-#experience ul {
+#experience ul,
+#education ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-inline: 2rem;
 }
 
-/* EDUCATION */
 #education {
   padding-inline: 2rem;
   margin-bottom: 3rem;
@@ -222,6 +238,8 @@ header.card img {
   padding-inline: 3rem;
 
   margin-bottom: 3rem;
+
+  cursor: pointer;
 }
 
 #projects .title h3 {
@@ -270,8 +288,19 @@ header.card img {
   gap: 1.6rem;
 }
 
+#projects a {
+  font-size: 1.5rem;
+  margin-inline: auto;
+}
+
 /* POSTS */
 #posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#posts .posts-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -349,13 +378,31 @@ footer {
     margin: 0;
   }
 
-  #projects {
-    margin-top: 4rem;
-  }
-
   #projects ul {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  border: none;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(192, 192, 192);
+  border-radius: 3px;
+  cursor: move;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: none;
 }
