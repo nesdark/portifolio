@@ -385,6 +385,23 @@ footer {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: auto;
+  }
+
+  main {
+    height: auto;
+    overflow-y: auto;
+    cursor: default;
+  }
+  .app > .container {
+    height: auto;
+    overflow-y: auto;
+    cursor: default;
+  }
+}
+
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
